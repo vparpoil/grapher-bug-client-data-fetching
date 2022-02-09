@@ -1,0 +1,25 @@
+<head>
+    <title>grapherrepro</title>
+</head>
+
+<body>
+<h1>This is the reproduction of a grapher bug</h1>
+
+{{> hello}}
+</body>
+
+<template name="hello">
+    <h3>Try to click the buttons in one order, then refresh the page and try again in another order, the result will
+        differ</h3>
+    <p>
+        When query1 is clicked first : no meta.name in query2 result
+    </p>
+    <p>
+        When query2 is clicked first : meta.name is in query2 result
+    </p>
+    <button class="query1">Query1</button>
+    <p>{{query1}}</p>
+
+    <button class="query2">Query2</button>
+    <p>{{query2}}</p>
+</template>
